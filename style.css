@@ -1,17 +1,84 @@
-body{
-    background-image: url("/images/pexels-felix-mittermeier-1146134.jpg");
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    color: aliceblue;
-    background-size: auto;
-    width: auto;
-    height:100%
+/*Set background image for the page*/
+body {
+    color: rgb(43, 6, 48);
+    height: 100%
 }
-.heading{
+
+/*Navbar*/
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    text-align: right;
+    font-size: large;
+    background-color: #ffffff;
+    margin-top: -9px;
+    border-top: 20px;
+    border-style: solid;
+    border-color: #ffffff;
+    width: 100%;
+}
+
+/*navbar buttons*/
+.nav-item {
+    background-color: #ffffff;
+    border: none;
+    color: #D61C4E;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+/*Heading div changes*/
+.heading {
     padding-left: 10%;
     padding-top: 5%;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: cursive;
+    color: #ffffff;
 }
-h1{
-    font-size:350%;
+
+/*set section 100% of window*/
+.section {
+    width: 100%;
+    height: 100%;
 }
+
+
+/*First section page-top styling*/
+/*Change the size of h1 to be bigger*/
+#page-top {
+    background-image: url("/images/pexels-mikael-blomkvist-6476587.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    text-align: center;
+}
+
+/*circled image styling*/
+#page-top div img {
+    width: 300px;
+    height: 300px;
+    border-width: 5px;
+    border-style: dashed;
+    border-radius: 50%;
+    border-color: #ffffff;
+}
+
+#name {
+    font-size: 350%;
+}
+
+#page-top div {
+    height: 100%;
+    background-color: #11173077;
+}
+
+#download-resume {
+    font: size 30px;
+    ;
+}
+
+/*Section2 */
