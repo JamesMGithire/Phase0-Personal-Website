@@ -14,19 +14,19 @@ body {
     z-index: 100;
     text-align: right;
     font-size: large;
-    background-color: #ffffff;
+    background-color: #0f023d;
     margin-top: -9px;
     border-top: 20px;
     border-style: solid;
-    border-color: #ffffff;
+    border-color: #0f023d;
     width: 100%;
 }
 
 /*navbar buttons*/
 .nav-item {
-    background-color: #ffffff;
+    background-color: #0f023d;
     border: none;
-    color: #D61C4E;
+    color: #ffffff;
     padding: 15px 20px;
     text-align: center;
     text-decoration: none;
@@ -42,7 +42,10 @@ body {
 .section {
     width: 100%;
     min-height: 550px;
+    display: block;
 }
+
+
 /*First section page-top styling*/
 /*Change the size of h1 to be bigger*/
 #page-top {
@@ -54,7 +57,9 @@ body {
     text-align: center;
 }
 
-.heading {
+#page-top div {
+    height: 100%;
+    background-color: #1716668a;
     padding-left: 10%;
     padding-top: 5%;
     font-family: cursive;
@@ -66,18 +71,13 @@ body {
     width: 300px;
     height: 300px;
     border-width: 5px;
-    border-style: dashed;
+    border-style:dotted;
     border-radius: 50%;
-    border-color: #ffffff;
+    border-color: #165550b0;
 }
 
 .my-name {
     font-size: 350%;
-}
-
-#page-top div {
-    height: 100%;
-    background-color: #11173077;
 }
 
 #download-resume {
@@ -102,7 +102,7 @@ body {
 #sec2-overlay{
     width: 100%;
     height: 100%;
-    background-color: #053841af;
+    background-color: #050e41af;
     background-size: cover;
 }
 
@@ -116,6 +116,11 @@ body {
     padding-top: 5%;
     padding-bottom: 5%;
 }
+
+#my-services-content h3{
+    text-align: center;
+}
+
 .services{
     max-width: 40%;
     float: left;
@@ -130,7 +135,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     background-color: #0f023d;
-    border-top-color: #7559db;
+    border-top-color: #1e143fd3;
     border-top-style: solid ;
     border-top-width: 50px;
     padding-bottom: 5%
