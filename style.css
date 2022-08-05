@@ -45,7 +45,7 @@ body {
 /*set section 100% of window*/
 .section {
     width: 100%;
-    min-height: 500px;
+    height: 500px;
 }
 
 
@@ -118,4 +118,41 @@ body {
     max-width: 40%;
     float: left;
     padding: 5%;
+}
+/*End Section2*/
+
+/*Begin section3 About me*/
+#about-me{
+    text-align: center;
+    margin: auto;
+    background-color: #0f023d;
+    border-top-color: #7559db;
+    border-top-style: solid ;
+    border-top-width: 50px; ;
+}
+
+#about-me-content{
+    background-color: #1e043f80;
+    color: #ffffff;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding-top: 5%;
+   
+}
+
+.about-me{
+    max-width: 40%;
+    float: left;
+    padding: 5%;
+}
+
+#about-me-text{
+    margin-left: 0%;
+    text-align: center;
+}
+
+
+#my-photo{
+    border-radius: 45%;
 }
