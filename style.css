@@ -96,17 +96,17 @@ body {
     background-size: cover;
     border-top-width: 50px;
     border-top-style: solid;
-    border-top-color: #5e0606;
+    border-top-color: #11053b;
 }
 #sec2-overlay{
     width: 100%;
     height: 100%;
-    background-color: #500202af;
+    background-color: #053841af;
     background-size: cover;
 }
 
 #my-services-content{
-    background-color: #9c0a3b9d;
+    background-color: #490a9c9d;
     color: #ffffff;
     text-align: center;
     width: 70%;
