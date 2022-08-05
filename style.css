@@ -82,3 +82,22 @@ body {
 }
 
 /*Section2 */
+#my-services{
+    width: 600px;
+    margin: auto;
+    background-image: url("/images/businessmen-handshake.webp");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-width: 50px;
+    border-top: #D61C4E;
+}
+#my-services-content{
+    background-color: #d61c4e46;
+    text-align: center;
+    width: 600px;
+    min-height: 500px;
+    margin: auto;
+    padding-top: 25%;
+}
