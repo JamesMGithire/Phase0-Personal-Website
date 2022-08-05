@@ -29,7 +29,7 @@ body {
     background-color: #0f023d;
     border: none;
     color: #ffffff;
-    padding: 15px 20px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -59,7 +59,8 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
 
@@ -83,15 +84,18 @@ body {
     border-bottom-color:#0f023d ;
     border-left-color:aqua ;
     border-right-color:aqua ;
-    
 }
 
 .my-name {
+    font-family:"questrialregular", Calibri, Tahoma, sans-serif;
     font-size: 350%;
-    margin-top: -5px;
+    letter-spacing:5px;
+    margin-top: 0%;
 }
 #my-description{
     margin-top: -2%;
+    font-family:"questrialregular", Calibri, Tahoma, sans-serif;
+    letter-spacing:5px;
 }
 
 #download-resume {
