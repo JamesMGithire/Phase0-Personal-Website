@@ -88,7 +88,7 @@ body {
 /*First section page-top styling*/
 /*Change the size of h1 to be bigger*/
 #page-top {
-    background-image: url("/images/pexels-mikael-blomkvist-6476587.jpg");
+    background-image: url("https://jamesmgithire.github.io/Phase0-Personal-Website/images/pexels-mikael-blomkvist-6476587.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -220,7 +220,7 @@ body {
 #my-services {
     width: auto;
     margin: auto;
-    background-image: url("/images/businessmen-handshake.webp");
+    background-image: url("https://jamesmgithire.github.io/Phase0-Personal-Website/images/businessmen-handshake.webp");
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
