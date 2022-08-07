@@ -1,5 +1,31 @@
 /*Smooth scroll behavior*/
-html{scroll-behavior:smooth}
+html {
+    scroll-behavior: smooth
+}
+
+/* Changing Scrollbar Look */
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #0f023d;
+    white-space: 0%;
+    column-width: 3rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(39, 12, 104);
+    border-radius: 20%;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(143, 9, 9);
+}
 
 /*Set background image for the page*/
 body {
@@ -21,6 +47,7 @@ body {
     border-style: solid;
     border-color: #0f023d;
     width: auto;
+    z-index: 1;
 }
 
 /*navbar buttons*/
@@ -35,6 +62,12 @@ body {
     font-size: 1rem;
 }
 
+.nav-item:hover {
+    position: unset;
+    color: #168488f1;
+}
+
+
 /*Heading div changes*/
 /*End of navbar*/
 
@@ -48,6 +81,7 @@ body {
     border-top-style: solid;
     border-top-color: #11053b;
     color: #ffffff;
+    z-index: -1;
 }
 
 
@@ -73,37 +107,117 @@ body {
 
 /*circled image styling*/
 #page-top div img {
-    width: 20rem; /*was 300px*/
+    width: 20rem;
+    /*was 300px*/
     height: 20rem;
-    margin: 0;
+    margin-top: -2%;
     border-width: 0.5rem;
-    border-style:solid;
+    border-style: solid;
     border-radius: 50%;
     border-top-color: #0f023d;
-    border-bottom-color:#0f023d ;
-    border-left-color:aqua ;
-    border-right-color:aqua ;
-}
-.my-name {
-    font-family:"questrialregular", Calibri, Tahoma, sans-serif;
-    font-size: 350%;
-    letter-spacing:0.5rem;
-    margin-top: 0%;
-}
-#my-description{
-    margin-top: -2%;
-    font-family:"questrialregular", Calibri, Tahoma, sans-serif;
-    letter-spacing:0.2rem;
+    border-bottom-color: #0f023d;
+    border-left-color: aqua;
+    border-right-color: aqua;
 }
 
-#download-resume {
-    margin-bottom: 5%;
+#page-top div img:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    animation: pulse 3s infinite;
+    cursor: pointer;
 }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 30, 97, 0.767);
+    }
+
+    50% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(11, 18, 116, 0.247);
+    }
+
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(8, 6, 126, 0);
+    }
+}
+
+
+.my-name {
+    font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+    font-size: 350%;
+    letter-spacing: 0.5rem;
+    margin-top: 0%;
+}
+
+#my-description {
+    font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+    letter-spacing: 0.2rem;
+}
+
+#my-description-container {
+    margin-top: ;
+    border-radius: 5px;
+    height: 3rem;
+    margin: auto;
+    width: 80%;
+    overflow: hidden;
+    background: -webkit-linear-gradient(260deg,rgba(30, 18, 134, 0.76), rgba(9, 126, 146, 0.637));
+}
+
+#my-description {
+    height: 100%;
+    text-align: center;
+    
+    /* animation properties */
+    -moz-transform: translateY(120%);
+    -webkit-transform: translateY(120%);
+    transform: translateY(100%);
+
+    -moz-animation: my-animation 5s linear infinite;
+    -webkit-animation: my-animation 5s linear infinite;
+    animation: my-animation 4s linear infinite;
+}
+
+@keyframes my-animation {
+    from {
+        -moz-transform: translateY(150%);
+        -webkit-transform: translateY(150%);
+        transform: translateY(150%);
+    }
+
+    to {
+        -moz-transform: translateY(-200%);
+        -webkit-transform: translateY(-200%);
+        transform: translateY(-200%);
+    }
+}
+
+
+.download-resume {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: #0f023d;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-size: 16px
+}
+
+.download-resume:hover {
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
 /*End section1 styling*/
 
 
 /*Begin Section2 */
-#my-services{
+#my-services {
     width: auto;
     margin: auto;
     background-image: url("/images/businessmen-handshake.webp");
@@ -111,14 +225,15 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
-#sec2-overlay{
+
+#sec2-overlay {
     width: 100%;
     height: 100%;
     background-color: #050e41af;
     background-size: cover;
 }
 
-#my-services-content{
+#my-services-content {
     background-color: #490a9c9d;
     color: #ffffff;
     text-align: center;
@@ -129,31 +244,47 @@ body {
     padding-bottom: 5%;
 }
 
-#my-services-content h3{
+#my-services-content h3 {
     text-align: center;
 }
 
-.services{
+.services {
     max-width: 40%;
     float: left;
     padding: 5%;
 }
+
+.service-pics {
+    margin: auto;
+    object-fit: cover;
+    overflow: hidden;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10%;
+}
+
+.service-pics:hover {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+    animation: pulse 3s infinite;
+}
+
+
 /*End Section2*/
 
 /*Begin Section 3 */
 
-#about-me{
+#about-me {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     background-color: #130447;
     border-top-color: #11053b;
-    border-top-style: solid ;
+    border-top-style: solid;
     border-top-width: 3.125rem;
     padding-bottom: 5%
 }
 
-#about-me-content{
+#about-me-content {
     background-color: #130447;
     color: #ffffff;
     text-align: center;
@@ -163,27 +294,33 @@ body {
     padding-bottom: 5%;
 }
 
-.about-me{
+.about-me {
     max-width: 40%;
     float: left;
     padding: 5%;
 }
 
-#about-me-text{
+#about-me-text {
     margin-left: 0%;
     text-align: left;
 }
- 
-#about-me-text h1,h3{
+
+#about-me-text h1,
+h3 {
     text-align: left;
 }
 
-#about-me-text h1{
+#about-me-text h1 {
     margin-top: -5%;
     font-size: 200%;
 }
 
-#my-photo{
+#my-photo {
     border-radius: 45%;
 }
 
+#my-photo:hover {
+    cursor: pointer;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
