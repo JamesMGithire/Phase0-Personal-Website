@@ -13,12 +13,11 @@ body {
 .navbar {
     position: sticky;
     top: 0;
-    z-index: 100;
     text-align: right;
     font-size: large;
     background-color: #0f023d;
-    margin-top: -9px;
-    border-top: 20px;
+    margin-top: -0.5rem;
+    border-top: 1rem;
     border-style: solid;
     border-color: #0f023d;
     width: auto;
@@ -29,11 +28,11 @@ body {
     background-color: #0f023d;
     border: none;
     color: #ffffff;
-    padding: 10px 10px;
+    padding: 0.625rem 0.625rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 /*Heading div changes*/
@@ -43,9 +42,9 @@ body {
 /*set section 100% of window*/
 .section {
     width: 100%;
-    min-height: 550px;
+    min-height: 100vh;
     display: block;
-    border-top-width: 50px;
+    border-top-width: 3.125rem;
     border-top-style: solid;
     border-top-color: #11053b;
     color: #ffffff;
@@ -64,10 +63,9 @@ body {
     text-align: center;
 }
 
-#page-top div {
+#page-top-overlay {
     height: 100%;
     background-color: #1716668a;
-    padding-left: 10%;
     padding-top: 5%;
     font-family: cursive;
     color: #ffffff;
@@ -75,9 +73,10 @@ body {
 
 /*circled image styling*/
 #page-top div img {
-    width: 300px;
-    height: 300px;
-    border-width: 7px;
+    width: 20rem; /*was 300px*/
+    height: 20rem;
+    margin: 0;
+    border-width: 0.5rem;
     border-style:solid;
     border-radius: 50%;
     border-top-color: #0f023d;
@@ -85,21 +84,19 @@ body {
     border-left-color:aqua ;
     border-right-color:aqua ;
 }
-
 .my-name {
     font-family:"questrialregular", Calibri, Tahoma, sans-serif;
     font-size: 350%;
-    letter-spacing:5px;
+    letter-spacing:0.5rem;
     margin-top: 0%;
 }
 #my-description{
     margin-top: -2%;
     font-family:"questrialregular", Calibri, Tahoma, sans-serif;
-    letter-spacing:5px;
+    letter-spacing:0.2rem;
 }
 
 #download-resume {
-    font: size 30px;
     margin-bottom: 5%;
 }
 /*End section1 styling*/
@@ -110,7 +107,6 @@ body {
     width: auto;
     margin: auto;
     background-image: url("/images/businessmen-handshake.webp");
-    min-height: 550px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -127,7 +123,7 @@ body {
     color: #ffffff;
     text-align: center;
     width: 70%;
-    min-height: 500px;
+    min-height: 100vh;
     margin: auto;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -153,7 +149,7 @@ body {
     background-color: #130447;
     border-top-color: #11053b;
     border-top-style: solid ;
-    border-top-width: 50px;
+    border-top-width: 3.125rem;
     padding-bottom: 5%
 }
 
@@ -184,6 +180,7 @@ body {
 
 #about-me-text h1{
     margin-top: -5%;
+    font-size: 200%;
 }
 
 #my-photo{
