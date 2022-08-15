@@ -228,12 +228,13 @@ h3 :hover {
 	border-width: 0.5rem;
 	border-style: solid;
 	border-radius: 50%;
-	border-top-color: #d8d400c2;
-	border-bottom-color: #aec200ce;
-	border-left-color: #d8d400c2;
-	border-right-color: #aec200ce;
+	border: 10px solid transparent;
+	/*2*/
+	background: linear-gradient(rgb(5, 78, 212), rgb(58, 10, 97)) border-box;
 	margin: auto;
-	animation: rotate 15s linear infinite;
+	object-fit: cover;
+	border-radius: 50%;
+	animation: rotate 3s linear infinite;
 }
 
 @keyframes rotate {
@@ -257,18 +258,13 @@ h3 :hover {
     border-left-color: #1095c1 ;
     border-right-color: #1095c1 ; */
 	background-color: rgba(0, 0, 0, .7);
-	animation: rotate-3 15s linear infinite;
+	animation: rotate-3 3s linear infinite;
 }
 
 @keyframes rotate-3 {
 	to {
 		transform: rotate(-360deg);
 	}
-}
-
-#my-photo1:hover {
-	box-shadow: 0 0 0 0 rgb(108, 128, 21);
-	cursor: pointer;
 }
 
 @keyframes pulse {
@@ -590,7 +586,8 @@ h3 {
 	background: linear-gradient(#1095c1 0 0) calc(70% - var(--p, 70%)) / var(--p, 0%) no-repeat;
 	transition: .4s, background-position 0s;
 }
-.skills#Swahili:hover{
+
+.skills#Swahili:hover {
 	color: #fff;
 	cursor: pointer;
 	--p: 70%;
