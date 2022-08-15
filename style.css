@@ -1,77 +1,165 @@
 /*Smooth scroll behavior*/
 html {
-    scroll-behavior: smooth
+	scroll-behavior: smooth;
 }
 
 /* Changing Scrollbar Look */
 /* width */
 ::-webkit-scrollbar {
-    width: 0.5rem;
+	width: 0.5rem;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #0f023d;
-    white-space: 0%;
-    column-width: 3rem;
+	background: #0f023d;
+	white-space: 0%;
+	column-width: 3rem;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgb(39, 12, 104);
-    border-radius: 20%;
+	background: rgb(39, 12, 104);
+	border-radius: 20%;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(143, 9, 9);
+	background: rgb(143, 9, 9);
 }
 
 /*Set background image for the page*/
 body {
-    color: rgb(43, 6, 48);
-    height: 100%;
-    width: auto;
-    background-color: #11053b;
-    min-width: 480px;
+	color: rgb(43, 6, 48);
+	height: 100%;
+	width: fit-content;
+	background-color: #11053b;
+	min-width: 480px;
+	max-width: max-content;
 }
 
 /*Navbar*/
 .navbar {
-    position: sticky;
-    top: 0;
-    text-align: right;
-    font-size: large;
-    background-color: #0f023d;
-    margin-top: -0.5rem;
-    border-top: 1rem;
-    border-top-style: solid;
-    border-top-color: #0f023d;
-    width: auto;
-    z-index: 1;
+	position: sticky;
+	top: 0;
+	text-align: right;
+	font-size: large;
+	background-color: #0f023d;
+	margin-top: -0.5rem;
+	border-top: 1rem;
+	border-top-style: solid;
+	border-top-color: #0f023d;
+	width: auto;
+	z-index: 1;
+}
+
+.container {
+	position: sticky;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.box {
+	width: 30px;
+	height: 30px;
+	color: #00136c;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s ease-in-out;
+}
+
+.box:first-child {
+	background-color: rgb(247, 0, 255);
+	animation: loader 2s infinite;
+}
+
+.box:nth-child(2) {
+	background-color: rgb(19, 179, 99);
+	animation: loader 3s infinite;
+}
+
+.box:nth-child(3) {
+	background-color: rgb(240, 116, 0);
+	animation: loader 4s infinite;
+}
+
+.box:last-child {
+	background-color: rgb(3, 41, 148);
+	animation: loader 5s infinite;
+}
+
+@keyframes loader {
+	0% {
+		rotate: 0deg;
+	}
+
+	25% {
+		rotate: y 90deg;
+		scale: 0.5;
+	}
+
+	50% {
+		rotate: 180deg;
+	}
+
+	75% {
+		rotate: x 270deg;
+		border-radius: 50%;
+	}
+
+	100% {
+		rotate: 360deg;
+	}
+}
+
+@supports not (rotate: 0deg) {
+	@keyframes loader {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		25% {
+			transform: scale(0.5) rotateY(90deg);
+		}
+
+		50% {
+			transfrom: rotate(180deg);
+		}
+
+		75% {
+			transform: rotateX(270deg);
+			border-radius: 50%;
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 }
 
 /* hover property in https://css-tricks.com/cool-hover-effects-using-background-properties/ hover-2*/
 /*navbar buttons*/
 .nav-item {
-    background-color: #0f023d;
-    border: none;
-    color: #ffffff;
-    padding: 0.625rem 0.625rem;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    background:
-        linear-gradient(#1095c1 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, .08em);
-    transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
+	background-color: #0f023d;
+	border: none;
+	color: #ffffff;
+	padding: 0.625rem 0.625rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	background:
+		linear-gradient(#1095c1 0 0) no-repeat calc(200% - var(--p, 0%)) 100% / 200% var(--p, .08em);
+	transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
 }
 
 .nav-item:hover {
-    position: unset;
-    --p: 100%;
-    --t: .3s;
-    color: #fff;
+	position: unset;
+	--p: 100%;
+	--t: .3s;
+	color: #fff;
 }
 
 
@@ -82,8 +170,8 @@ a,
 h1,
 h2,
 h3 {
-    font-family: "questrialregular", Calibri, Tahoma, sans-serif;
-    letter-spacing: 2px;
+	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+	letter-spacing: 2px;
 }
 
 p,
@@ -91,207 +179,166 @@ a,
 h1,
 h2,
 h3 :hover {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 /*set section 100% of window*/
 .section {
-    width: 100%;
-    min-height: 100vh;
-    height: length;
-    display: block;
-    border-top-width: 3.125rem;
-    border-top-style: solid;
-    border-top-color: #11053b;
-    color: #ffffff;
-    z-index: -1;
+	width: 100%;
+	min-height: 100vh;
+	height: length;
+	display: block;
+	border-top-width: 3.125rem;
+	border-top-style: solid;
+	border-top-color: #11053b;
+	color: #ffffff;
+	z-index: -1;
 }
+
+/* End of Top */
+
 
 
 /*First section page-top styling*/
 /*Change the size of h1 to be bigger*/
 #page-top {
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
 }
 
 #page-top-overlay {
-    height: 100%;
-    background-color: #130447;
-    padding-top: 5%;
-    font-family: cursive;
-    color: #ffffff;
+	height: 100%;
+	background-color: #130447;
+	padding-top: 5%;
+	font-family: cursive;
+	color: #ffffff;
 }
-.container {
-    position: sticky;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .box {
-    width: 30px;
-    height: 30px;
-    color: #00136c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s ease-in-out;
-  }
-  
-  .box:first-child {
-    background-color: red;
-    animation: loader 2s infinite;
-  }
-  
-  .box:nth-child(2) {
-    background-color: green;
-    animation: loader 3s infinite;
-  }
-  
-  .box:nth-child(3) {
-    background-color: yellow;
-    animation: loader 4s infinite;
-  }
-  
-  .box:last-child {
-    background-color: blue;
-    animation: loader 5s infinite;
-  }
-  
-  @keyframes loader {
-    0% {
-      rotate: 0deg;
-    }
-    25% {
-      rotate: y 90deg;
-      scale: 0.5;
-    }
-    50% {
-      rotate: 180deg;
-    }
-    75% {
-      rotate: x 270deg;
-      border-radius: 50%;
-    }
-    100% {
-      rotate: 360deg;
-    }
-  }
-  
-  @supports not (rotate: 0deg) {
-    @keyframes loader {
-      0% {
-        transform: rotate(0deg);
-      }
-      25% {
-        transform: scale(0.5) rotateY(90deg);
-      }
-      50% {
-        transfrom: rotate(180deg);
-      }
-      75% {
-        transform: rotateX(270deg);
-        border-radius: 50%;
-      }
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-  }
 
+#my-photo1over {
+	background-color: #00146c93;
+	width: 20rem;
+	/*was 300px*/
+	height: 20rem;
+	position: static;
+	margin-top: -2%;
+	border-width: 0.5rem;
+	border-style: solid;
+	border-radius: 50%;
+	border-top-color: #d8d400c2;
+	border-bottom-color: #aec200ce;
+	border-left-color: #d8d400c2;
+	border-right-color: #aec200ce;
+	margin: auto;
+	animation: rotate 15s linear infinite;
+}
 
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
 
 /*circled image styling*/
-#page-top div img {
-    width: 20rem;
-    /*was 300px*/
-    height: 20rem;
-    margin-top: -2%;
-    border-width: 0.5rem;
-    border-style: solid;
-    border-radius: 50%;
-    border-top-color: #0f023d;
+#my-photo1 {
+	width: 20rem;
+	/*was 300px*/
+	height: 20rem;
+	position: static;
+	margin-top: 0%;
+	/* border-width: 0.5rem;
+    border-style: solid; */
+	border-radius: 50%;
+	/* border-top-color: #0f023d;
     border-bottom-color: #0f023d;
-    border-left-color: aqua;
-    border-right-color: aqua;
-    background-color: rgba(0, 0, 0, .7);
+    border-left-color: #1095c1 ;
+    border-right-color: #1095c1 ; */
+	background-color: rgba(0, 0, 0, .7);
+	animation: rotate-3 15s linear infinite;
 }
 
-#page-top div img:hover {
-    box-shadow: 0 0 0 0 rgb(108, 128, 21);
-    animation: pulse 3s infinite;
-    cursor: pointer;
+@keyframes rotate-3 {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+#my-photo1:hover {
+	box-shadow: 0 0 0 0 rgb(108, 128, 21);
+	cursor: pointer;
 }
 
 @keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
-    }
+	0% {
+		box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
+		transform: rotate(0deg);
+	}
 
-    50% {
-        box-shadow: 0 0 0 10px rgba(4, 49, 107, 0.411);
-    }
+	50% {
+		box-shadow: 0 0 0 10px rgba(4, 49, 107, 0.411);
+		transform: rotate(0deg);
+	}
 
-    100% {
-        box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
-    }
+	100% {
+		box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
+		transform: rotate(0deg);
+	}
 }
 
 
 .my-name {
-    font-family: "questrialregular", Calibri, Tahoma, sans-serif;
-    font-size: 350%;
-    letter-spacing: 0.5rem;
-    margin-top: 0%;
+	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+	font-size: 350%;
+	letter-spacing: 0.5rem;
+	margin-top: 0%;
 }
 
 #my-description {
-    font-family: "questrialregular", Calibri, Tahoma, sans-serif;
-    letter-spacing: 0.2rem;
-    height: 100%;
-    text-align: center;
-    --c: no-repeat linear-gradient(#1095c1 0 0);
-    background:
-        var(--c) calc(-101% + var(--p, 0%)) 100%,
-        var(--c) calc(201% - var(--p, 0%)) 0;
-    background-size: 50.1% var(--p, .08em);
-    transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
+	border-radius: 1rem;
+	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+	letter-spacing: 0.2rem;
+	height: 100%;
+	text-align: center;
+	--c: no-repeat linear-gradient(rgb(5, 78, 212), rgb(58, 10, 97));
+	background:
+		var(--c) calc(-101% + var(--p, 0%)) 100%,
+		var(--c) calc(201% - var(--p, 0%)) 0;
+	background-size: 50.1% var(--p, .08em);
+	transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
 }
 
 #my-description:hover {
-    --p: 101%;
-    --t: 0.3s;
-    color: #fff;
+	--p: 101%;
+	--t: 0.3s;
+	color: #fff;
 }
-#my-description-container{
-    margin: auto;
-    min-width: 5rem;
-    max-width: 70%;
+
+#my-description-container {
+	margin: auto;
+	min-width: 5rem;
+	max-width: 70%;
 }
 
 
 .download-resume {
-    margin-top: 2%;
-    margin-bottom: 2%;
-    background-color: #0f023d;
-    border: none;
-    color: white;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 16px;
-    border-radius: 10px;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	background-color: #0f023d;
+	border: none;
+	color: white;
+	padding: 15px 30px;
+	text-align: center;
+	text-decoration: underline;
+	font-size: 16px;
+	border-radius: 10px;
 }
 
 .download-resume:hover {
-    animation: pulse 3s infinite;
-    cursor: pointer;
+	animation: pulse 3s infinite;
+	cursor: pointer;
 }
 
 /*End section1 styling*/
@@ -299,59 +346,59 @@ h3 :hover {
 
 /*Begin Section2 */
 #my-services {
-    width: 100%;
-    min-height: fit-content;
-    background-attachment: fixed;
-    background-size: cover;
+	width: 100%;
+	min-height: fit-content;
+	background-attachment: fixed;
+	background-size: cover;
 
 }
 
 #sec2-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: #11053b;
-    background-size: cover;
+	width: 100%;
+	height: 100%;
+	background-color: #11053b;
+	background-size: cover;
 }
 
 #my-services-content {
-    background-color: #130447;
-    color: #ffffff;
-    text-align: center;
-    height: 100%;
-    width: 70%;
-    margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    border-radius: 20px;
+	background-color: #130447;
+	color: #ffffff;
+	text-align: center;
+	height: 100%;
+	width: 70%;
+	margin: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	border-radius: 20px;
 
 }
 
 #my-services-content h3 {
-    text-align: center;
-    height: fit-content;
+	text-align: center;
+	height: fit-content;
 }
 
 .services {
-    width: 10rem;
-    padding-left: 5%;
-    padding-right: 5%;
-    display: inline-block;
-    text-align: center;
-    vertical-align: text-top;
+	width: 10rem;
+	padding-left: 5%;
+	padding-right: 5%;
+	display: inline-block;
+	text-align: center;
+	vertical-align: text-top;
 }
 
 .service-pics {
-    margin: auto;
-    object-fit: cover;
-    overflow: hidden;
-    width: 6rem;
-    height: 6rem;
-    border-radius: 10%;
+	margin: auto;
+	object-fit: cover;
+	overflow: hidden;
+	width: 6rem;
+	height: 6rem;
+	border-radius: 10%;
 }
 
 .service-pics:hover {
-    box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-    animation: pulse 3s infinite;
+	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+	animation: pulse 3s infinite;
 }
 
 
@@ -360,108 +407,229 @@ h3 :hover {
 /*Begin Section 3 */
 
 #about-me {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #130447;
-    border-top-color: #11053b;
-    border-top-style: solid;
-    border-top-width: 3.125rem;
-    padding-bottom: 5%
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #130447;
+	border-top-color: #11053b;
+	border-top-style: solid;
+	border-top-width: 3.125rem;
+	padding-bottom: 5%
 }
 
 #about-me-content {
-    background-color: #130447;
-    color: #ffffff;
-    text-align: center;
-    width: 90%;
-    margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+	background-color: #130447;
+	color: #ffffff;
+	text-align: center;
+	width: 90%;
+	margin: auto;
+	padding-bottom: 5%;
 }
 
 .about-me {
-    max-width: 40%;
-    float: left;
-    padding: 5%;
+	max-width: 40%;
+	float: left;
+	padding: 5%;
 }
 
 #about-me-text {
-    margin-left: 0%;
-    text-align: left;
-    min-width: 10rem;
+	margin-left: 0%;
+	text-align: left;
+	min-width: 10rem;
 }
 
 #about-me-text h1,
 h3 {
-    text-align: left;
+	text-align: left;
 }
 
 #about-me-text h1 {
-    margin-top: -5%;
-    font-size: 200%;
+	margin-top: -5%;
+	font-size: 200%;
 }
 
-#my-photo {
-    border-radius: 45%;
+#my-photo2 {
+	border-radius: 45%;
 }
 
-#my-photo:hover {
-    cursor: pointer;
-    animation: pulse 3s infinite;
-    cursor: pointer;
+#my-photo2:hover {
+	cursor: pointer;
+	animation: pulse 3s infinite;
+	cursor: pointer;
 }
+
+/* End of Section 3 */
+
 
 /*Section 4 Skills*/
 #my-skills {
-    background-color: #130447;
-    color: #ffffff;
-    /* text-align: center; */
-    width: 100%;
-    min-height: 100vh;
-    margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+	background-color: #130447;
+	color: #ffffff;
+	/* text-align: center; */
+	width: 100%;
+	min-height: 100vh;
+	margin: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	cursor: pointer;
+}
+
+.skills {
+	margin: auto;
+	width: 70%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.skills p {
+	padding-left: 0.5rem;
 }
 
 /* Skills hover property in https://css-tricks.com/cool-hover-effects-using-background-properties/ hover-2*/
-.skills {
-    margin: auto;
-    width: 70%;
-    padding: 20px;
-    background: linear-gradient(#1095c1 0 0) calc(100% - var(--p, 0%)) / var(--p, 0%) no-repeat;
-    transition: .4s, background-position 0s;
+.skills#adobeP {
+	background: linear-gradient(#1095c1 0 0) calc(65% - var(--p, 65%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
 }
 
-/* 
-.seven{
-    background: linear-gradient(#1095c1 0 0) calc(100% - var(--p,0%)) / var(--p,0%) no-repeat;
-} */
-
-.skills:hover {
-    color: #fff;
-    cursor: pointer;
-    --p: 100%;
+.skills#adobeP:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 65%;
 }
+
+.skills#wp {
+	background: linear-gradient(#1095c1 0 0) calc(45% - var(--p, 45%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#wp:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 45%;
+}
+
+.skills#webBuild {
+	background: linear-gradient(#1095c1 0 0) calc(45% - var(--p, 45%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#webBuild:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 45%;
+}
+
+.skills#php {
+	background: linear-gradient(#1095c1 0 0) calc(30% - var(--p, 30%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#php:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 30%;
+}
+
+.skills#c {
+	background: linear-gradient(#1095c1 0 0) calc(40% - var(--p, 40%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#c:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 40%;
+}
+
+.skills#python {
+	background: linear-gradient(#1095c1 0 0) calc(15% - var(--p, 15%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#python:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 15%;
+}
+
+.skills#softskills {
+	background: linear-gradient(#1095c1 0 0) calc(90% - var(--p, 90%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#softskills:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 90%;
+}
+
+/* Language Sector */
+.skills#English {
+	background: linear-gradient(#1095c1 0 0) calc(80% - var(--p, 80%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#English:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 80%;
+}
+
+.skills#German {
+	background: linear-gradient(#1095c1 0 0) calc(5% - var(--p, 5%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#German:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 5%;
+}
+
+.skills#Swahili {
+	background: linear-gradient(#1095c1 0 0) calc(70% - var(--p, 70%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+.skills#Swahili:hover{
+	color: #fff;
+	cursor: pointer;
+	--p: 70%;
+}
+
+.skills#Kikuyu {
+	background: linear-gradient(#1095c1 0 0) calc(60% - var(--p, 60%)) / var(--p, 0%) no-repeat;
+	transition: .4s, background-position 0s;
+}
+
+.skills#Kikuyu:hover {
+	color: #fff;
+	cursor: pointer;
+	--p: 60%;
+}
+
+
 
 .scale {
-    height: 3px;
-    width: 100%;
-    background-color: #ffffff;
+	height: 3px;
+	width: 100%;
+	background-color: #ffffff;
 }
 
 .number {
-    float: right;
+	float: right;
 }
+
+/* End of Section 4 */
+
 
 /* Section 5  Prortfolio*/
 #portfolio {
-    background-color: #130447;
-    color: #ffffff;
-    text-align: center;
-    width: 70%;
-    min-height: 100vh;
-    margin: auto;
-    padding-top: 5%;
-    padding-bottom: 5%;
+	background-color: #130447;
+	color: #ffffff;
+	text-align: center;
+	width: 70%;
+	min-height: 100vh;
+	margin: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
 }

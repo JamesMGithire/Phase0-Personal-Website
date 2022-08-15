@@ -2,8 +2,7 @@
 <html lang="en">
 
 <head>
-    <!--Linking css and js files-->
-    <script defer href="script.js" type="script"></script>
+    <!--Linking css files-->
     <link rel="stylesheet" href="style.css" />
     <!--New Fonts-->
     <link rel="stylesheet" href="WebFonts/OpensansForWeb/webfontkit-20220805-105029/stylesheet.css" />
@@ -49,7 +48,8 @@
     <!--Begin section 1 page-top-->
     <div id="page-top">
         <div id="page-top-overlay" class="heading">
-            <img src="images/IMG-20220731-WA00012.jpg">
+            <div id="my-photo1over" >
+            <img id="my-photo1" src="images/IMG-20220731-WA00012.jpg"></div>
             <div id="page-top-text">
                 <h1 class="my-name">James M Githire</h1>
                 <div id="my-description-container">
@@ -67,12 +67,16 @@
             <div id="my-services-content">
                 <h3>My Services</h3>
                 <div id="service1" class="services">
-                    <img src="images/pexels-mikhail-nilov-6613955.jpg" alt="service1" class="service-pics">
-                    <p>Mobile Applications...</p>
+                    <div class="s-overlay">
+                        <img src="images/pexels-mikhail-nilov-6613955.jpg" alt="service1" class="service-pics">
+                        <p>Mobile Applications...</p>
+                    </div>
                 </div>
                 <div id="service2" class="services">
-                    <img src="images/pexels-mikhail-nilov-6613955.jpg" alt="service1" class="service-pics">
-                    <p>Web Applications...</p>
+                    <div class="s-overlay">
+                        <img src="images/pexels-mikhail-nilov-6613955.jpg" alt="service1" class="service-pics">
+                        <p>Web Applications...</p>
+                    </div>
                 </div>
                 <div id="service3" class="services">
                     <img src="images/pexels-mikhail-nilov-6613955.jpg" alt="service1" class="service-pics">
@@ -95,9 +99,12 @@
                     <br><br>With experience in front-end and back-end technologies, I have acquired skills, knowledge
                     and resources to make your projects a succes.
                 </p>
-                <button class="download-resume">Download CV</button>
+                <button class="download-resume">Download Resume</button>
             </div>
-            <img id="my-photo" class="about-me" src="images/output-onlinejpgtools (1).jpg" alt="image of James" />
+            <div>
+                <img id="my-photo2" class="about-me" src="images/output-onlinejpgtools (1).jpg" alt="image of James"
+                    style="border-radius: 45%;" />
+            </div>
 
         </div>
         <!--End section 3-->
@@ -107,49 +114,49 @@
     <div id="my-skills" class="section">
         <p style="font-size: large; margin: auto;width: 60%;text-align:center;padding-bottom: 1rem;">I am professional,
             sophisticated and technologically proficient in different disciplines.</p>
-        <div id="adobeP" class="skills sodd">
+        <div id="adobeP" class="skills">
             <p>Adobe Photoshop<span class="number" style="left:50px">65%</span></p>
             <div class="scale" style="width: 65%;"></div>
         </div>
-        <div id="wp" class="skills seven">
+        <div id="wp" class="skills">
             <p>Wordpress<span class="number">45%</span></p>
             <div class="scale" style="width: 45%;"></div>
         </div>
-        <div id="webBuild" class="skills sodd">
+        <div id="webBuild" class="skills">
             <p>HTML, JS & CSS<span class="number">45%</span></p>
             <div class="scale" style="width: 45%;"></div>
         </div>
-        <div id="php" class="skills seven">
+        <div id="php" class="skills">
             <p>PHP<span class="number">30%</span></p>
             <div class="scale" style="width: 30%;"></div>
         </div>
-        <div id="c" class="skills sodd">
+        <div id="c" class="skills">
             <p>C<span class="number">40%</span></p>
             <div class="scale" style="width: 40%;"></div>
         </div>
-        <div id="python" class="skills seven">
+        <div id="python" class="skills">
             <p>Python<span class="number">15%</span></p>
             <div class="scale" style="width: 15%;"></div>
         </div>
-        <div id="softskills" class="skills sodd">
+        <div id="softskills" class="skills">
             <p>Soft Skills<span class="number">90%</span></p>
             <div class="scale" style="width: 90%;"></div>
         </div>
         <p style="font-size: large; margin: auto;width: 60%;text-align:center;padding-bottom: 1rem;padding-top: 3rem;">I
             speak several languages.</p>
-        <div id="English" class="skills sodd">
+        <div id="English" class="skills">
             <p>English<span class="number">80%</span></p>
             <div class="scale" style="width: 80%;"></div>
         </div>
-        <div id="German" class="skills seven">
+        <div id="German" class="skills">
             <p>German<span class="number">5%</span></p>
             <div class="scale" style="width: 5%;"></div>
         </div>
-        <div id="Swahili" class="skills sodd">
+        <div id="Swahili" class="skills">
             <p>Swahili<span class="number">70%</span></p>
             <div class="scale" style="width: 70%;"></div>
         </div>
-        <div id="Kikuyu" class="skills seven">
+        <div id="Kikuyu" class="skills">
             <p>Kikuyu<span class="number">60%</span></p>
             <div class="scale" style="width: 60%;"></div>
         </div>
@@ -169,7 +176,8 @@
             fugiat pariatur? Quidem optio odio, ipsum culpa itaque adipisci ad alias reiciendis, ratione repudiandae
             voluptate perspiciatis.</p>
     </div>
-
+    <!-- Java SCript file -->
+    <script defer href="script.js" type="script"></script>
 </body>
 
 </html>
