@@ -228,12 +228,10 @@ h3 :hover {
 	border-width: 0.5rem;
 	border-style: solid;
 	border-radius: 50%;
+	/* https://dev.to/afif/border-with-gradient-and-radius-387f */
 	border: 10px solid transparent;
-	/*2*/
-	background: linear-gradient(rgb(5, 78, 212), rgb(58, 10, 97)) border-box;
+	background: linear-gradient(rgb(5, 78, 212), rgb(139, 0, 253)) border-box;
 	margin: auto;
-	object-fit: cover;
-	border-radius: 50%;
 	animation: rotate 3s linear infinite;
 }
 
@@ -249,7 +247,7 @@ h3 :hover {
 	/*was 300px*/
 	height: 20rem;
 	position: static;
-	margin-top: 0%;
+	margin:auto;
 	/* border-width: 0.5rem;
     border-style: solid; */
 	border-radius: 50%;
@@ -269,7 +267,7 @@ h3 :hover {
 
 @keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
+		box-shadow: 0 0 0 0 rgb(139, 0, 253);
 		transform: rotate(0deg);
 	}
 
@@ -279,7 +277,7 @@ h3 :hover {
 	}
 
 	100% {
-		box-shadow: 0 0 0 0 rgba(147, 9, 160, 0.637);
+		box-shadow: 0 0 0 0 rgb(139, 0, 253);
 		transform: rotate(0deg);
 	}
 }
@@ -298,7 +296,7 @@ h3 :hover {
 	letter-spacing: 0.2rem;
 	height: 100%;
 	text-align: center;
-	--c: no-repeat linear-gradient(rgb(5, 78, 212), rgb(58, 10, 97));
+	--c: no-repeat linear-gradient(rgb(5, 78, 212), rgb(139, 0, 253));
 	background:
 		var(--c) calc(-101% + var(--p, 0%)) 100%,
 		var(--c) calc(201% - var(--p, 0%)) 0;
@@ -475,6 +473,7 @@ h3 {
 	width: 70%;
 	padding-top: 20px;
 	padding-bottom: 20px;
+	/* border-radius: 20px; */
 }
 
 .skills p {
