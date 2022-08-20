@@ -2,6 +2,18 @@
 html {
 	scroll-behavior: smooth;
 }
+html,body{
+	min-width: 800px;
+}
+
+*{
+	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
+	letter-spacing: 2px;
+}
+
+*:hover {
+	cursor: pointer;
+}
 
 /* Changing Scrollbar Look */
 /* width */
@@ -11,7 +23,7 @@ html {
 
 /* Track */
 ::-webkit-scrollbar-track {
-	background: #0f023d;
+	background: #11053b;
 	white-space: 0%;
 	column-width: 3rem;
 }
@@ -24,7 +36,7 @@ html {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-	background: rgb(143, 9, 9);
+	background: rgb(49, 3, 214);
 }
 
 /*Set background image for the page*/
@@ -36,6 +48,7 @@ body {
 	min-width: 480px;
 	max-width: max-content;
 }
+
 
 /*Navbar*/
 .navbar {
@@ -162,25 +175,12 @@ body {
 	color: #fff;
 }
 
-
+#nomadHr{
+	position: absolute;
+	top:2%
+}
 /*Heading div changes*/
 /*End of navbar*/
-p,
-a,
-h1,
-h2,
-h3 {
-	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
-	letter-spacing: 2px;
-}
-
-p,
-a,
-h1,
-h2,
-h3 :hover {
-	cursor: pointer;
-}
 
 /*set section 100% of window*/
 .section {
@@ -195,7 +195,7 @@ h3 :hover {
 	z-index: -1;
 }
 
-/* End of Top */
+/* End of Top and navbar */
 
 
 
@@ -212,7 +212,7 @@ h3 :hover {
 
 #page-top-overlay {
 	height: 100%;
-	background-color: #130447;
+	background-color: #120447;
 	padding-top: 5%;
 	font-family: cursive;
 	color: #ffffff;
@@ -265,26 +265,10 @@ h3 :hover {
 	}
 }
 
-@keyframes pulse {
-	0% {
-		box-shadow: 0 0 0 0 rgb(139, 0, 253);
-		transform: rotate(0deg);
-	}
 
-	50% {
-		box-shadow: 0 0 0 10px rgba(4, 49, 107, 0.411);
-		transform: rotate(0deg);
-	}
-
-	100% {
-		box-shadow: 0 0 0 0 rgb(139, 0, 253);
-		transform: rotate(0deg);
-	}
-}
 
 
 .my-name {
-	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
 	font-size: 350%;
 	letter-spacing: 0.5rem;
 	margin-top: 0%;
@@ -292,7 +276,6 @@ h3 :hover {
 
 #my-description {
 	border-radius: 1rem;
-	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
 	letter-spacing: 0.2rem;
 	height: 100%;
 	text-align: center;
@@ -303,6 +286,7 @@ h3 :hover {
 	background-size: 50.1% var(--p, .08em);
 	transition: .3s var(--t, 0s), background-position .3s calc(.3s - var(--t, 0s));
 }
+
 
 #my-description:hover {
 	--p: 101%;
@@ -389,7 +373,22 @@ h3 :hover {
 	height: 6rem;
 	border-radius: 10%;
 }
+@keyframes pulse {
+	0% {
+		box-shadow: 0 0 0 0 rgb(139, 0, 253);
+		transform: rotate(0deg);
+	}
 
+	50% {
+		box-shadow: 0 0 0 10px rgba(4, 49, 107, 0.411);
+		transform: rotate(0deg);
+	}
+
+	100% {
+		box-shadow: 0 0 0 0 rgb(139, 0, 253);
+		transform: rotate(0deg);
+	}
+}
 .service-pics:hover {
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	animation: pulse 3s infinite;
