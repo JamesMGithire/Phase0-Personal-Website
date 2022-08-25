@@ -7,10 +7,6 @@ html,
 body {
 	min-width: 800px;
 	justify-content: center;
-	color: rgb(43, 6, 48);
-	height: 100%;
-	background-color: #11053b;
-
 }
 
 * {
@@ -45,6 +41,15 @@ body {
 ::-webkit-scrollbar-thumb:hover {
 	background: rgb(49, 3, 214);
 }
+
+/*Set background image for the page*/
+body {
+	color: rgb(43, 6, 48);
+	height: 100%;
+	background-color: #11053b;
+	min-width: 800px;
+}
+
 
 /*Navbar*/
 .navbar {
@@ -639,7 +644,7 @@ h3 {
 }
 
 .sampleWork {
-	justify-self: center;
+	justify-self:center;
 	margin: auto;
 	width: 8rem;
 	height: 8rem;
@@ -647,3 +652,5 @@ h3 {
 	float: left;
 	text-align: center;
 }
+
+
