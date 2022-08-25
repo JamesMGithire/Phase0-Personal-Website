@@ -26,13 +26,10 @@ function nomadFun() {
     let secDivs = this.document.getElementsByClassName("section");
     try {
         for (el in secDivs) {
-            if (secDivs[el].getBoundingClientRect().y <= (window.innerHeight/2) && secDivs[el].getBoundingClientRect().y >= -(secDivs[el].getBoundingClientRect().height-200)) {
+            if (secDivs[el].getBoundingClientRect().y <= (window.innerHeight / 2) && secDivs[el].getBoundingClientRect().y >= -(secDivs[el].getBoundingClientRect().height - 200)) {
                 nomad.style.width = `${aElements[el].getBoundingClientRect().width - 20}px`
-                console.log('Element ' + el + ' is fully visible in screen at ' + secDivs[el].getBoundingClientRect().y);
-
                 return `${aElements[el].getBoundingClientRect().left}px`;
             }
-            console.log(secDivs[el].getBoundingClientRect().height);
         }
     }
     catch (err) {

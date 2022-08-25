@@ -2,11 +2,13 @@
 html {
 	scroll-behavior: smooth;
 }
-html,body{
+
+html,
+body {
 	min-width: 800px;
 }
 
-*{
+* {
 	font-family: "questrialregular", Calibri, Tahoma, sans-serif;
 	letter-spacing: 2px;
 }
@@ -175,10 +177,11 @@ body {
 	color: #fff;
 }
 
-#nomadHr{
+#nomadHr {
 	position: absolute;
-	top:2%
+	top: 2%
 }
+
 /*Heading div changes*/
 /*End of navbar*/
 
@@ -247,7 +250,7 @@ body {
 	/*was 300px*/
 	height: 20rem;
 	position: static;
-	margin:auto;
+	margin: auto;
 	/* border-width: 0.5rem;
     border-style: solid; */
 	border-radius: 50%;
@@ -373,6 +376,7 @@ body {
 	height: 6rem;
 	border-radius: 10%;
 }
+
 @keyframes pulse {
 	0% {
 		box-shadow: 0 0 0 0 rgb(139, 0, 253);
@@ -389,6 +393,7 @@ body {
 		transform: rotate(0deg);
 	}
 }
+
 .service-pics:hover {
 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	animation: pulse 3s infinite;
@@ -619,6 +624,7 @@ h3 {
 
 /* Section 5  Prortfolio*/
 #portfolio {
+	margin: auto;
 	background-color: #130447;
 	color: #ffffff;
 	text-align: center;
@@ -627,4 +633,31 @@ h3 {
 	margin: auto;
 	padding-top: 5%;
 	padding-bottom: 5%;
+
+}
+
+.sampleWorkContainer {
+	background-color: #130447;
+	color: #ffffff;
+	margin: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	border-radius: 20px;
+	justify-content: center;
+}
+
+.sampleWork {
+	justify-self:center;
+	margin: auto;
+	width: 8rem;
+	height: 8rem;
+	padding: 10%;
+	float: left;
+	text-align: center;
+}
+
+
+/* Contact section */
+.form-contact{
+	height:40px;
 }
